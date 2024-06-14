@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/review-reflect/pom.xml" />
         <option value="$PROJECT_DIR$/static-proxy/pom.xml" />
         <option value="$PROJECT_DIR$/dynamic-proxy-jdk/pom.xml" />
+        <option value="$PROJECT_DIR$/dynamic-proxy-jdk2myself/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
