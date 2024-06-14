@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--spring提供的实例化方式，第一种：在配置文件中直接配置类全路径，spring会自动调用该类的无参构造方法实例化bean-->
+
+    <!--Spring提供的第二种实例化方式：通过简单工厂模式，需在spring配置文件中告诉spring框架，调用哪个类的哪个方法获取Bean-->
+    <!--factory-method 属性指定的是工厂类当中的静态方法，告诉spring框架，调取这个方法可以获取bean-->
+    <bean id="starBean" class="com.powernode.spring6.bean.StarFactory" factory-method="get"/>
+
+    <!--spring提供的实例化方法，第三种，通过工厂方式模式，通过factory-bean属性+factory-method属性来共同完成-->
+    <!--告诉spring调用哪个对象的哪个方法获取bean-->
+    <bean id="gunFactory" class="com.powernode.spring6.bean.GunFactory"/><!--gunFactory实际上就是一个Factorybean-->
+
+    <bean id="gun" factory-bean="gunFactory" factory-method="get"/>
+
+    <!--spring提供的实例化方式，第四种：通过FactoryBean接口实现-->
+    <!--这种方式是第三种方式的简化-->
+    <!--通过特殊的bean：工厂Bean。来返回一个普通的Bean Person对象-->
+    <bean id="person" class="com.powernode.spring6.bean.PersonFactoryBean"/>
+</beans>

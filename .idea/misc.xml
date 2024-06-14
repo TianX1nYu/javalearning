@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring6-001-revelation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-002-first/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-003-denepdency-injection/pom.xml" />
+        <option value="$PROJECT_DIR$/simple-factory/pom.xml" />
+        <option value="$PROJECT_DIR$/factory-method/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring6-005-bean-instantiation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-005-bean-instantiation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-006-bean-lifecycle/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-007-circular-dependency/pom.xml" />
+        <option value="$PROJECT_DIR$/review-reflect/pom.xml" />
+        <option value="$PROJECT_DIR$/static-proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/dynamic-proxy-jdk/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Spring6-005-bean-instantiation/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

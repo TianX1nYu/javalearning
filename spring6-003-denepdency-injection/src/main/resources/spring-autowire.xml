@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--根据名字自动装配;根据set注入-->
+    <bean id="userServiceBean" class="com.powernode.spring6.service.UserService" autowire="byName"/>
+    <!--id一般也叫做bean的名称，这的id就是set注入里的property的name，id不能随便修改，set方法名，去掉set剩余单词首字母小写-->
+    <bean id="userDao" class="com.powernode.spring6.dao.UserDao"/>
+    <!--根据类型自动装配，根据set注入，不再需要指定id名；
+    根据类型自动装配，在有效的配置文件当中，某种类型的实例只能有一个-->
+    <!--<bean id="userServiceBean" class="com.powernode.spring6.service.UserService" autowire="byType"/>-->
+    <!--<bean class="com.powernode.spring6.dao.UserDao"/>-->
+    <!--<bean id="x" class="com.powernode.spring6.dao.UserDao"/>  报错，找到两个-->
+
+
+
+    <!--<bean id="userServiceBean" class="com.powernode.spring6.service.UserService">-->
+    <!--    &lt;!&ndash;想让Spring调用对应的set方法，需配置property标签&ndash;&gt;-->
+    <!--    &lt;!&ndash;name属性指定方式:set方法的方法名，去掉set剩余单词首字母小写&ndash;&gt;-->
+    <!--    <property name="userDao" ref="userDaoBean"/>-->
+    <!--</bean>-->
+    <!--<bean id="userDaoBean" class="com.powernode.spring6.dao.UserDao"/>-->
+
+</beans>
