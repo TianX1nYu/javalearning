@@ -2,6 +2,7 @@ package com.powernode.proxy.client;
 
 import com.powernode.proxy.service.OrderService;
 import com.powernode.proxy.service.OrderServiceImpl;
+import com.powernode.proxy.service.TimerInvocationHandler;
 
 import java.lang.reflect.Proxy;
 
@@ -23,9 +24,13 @@ public class Client {
         //    1、在内存中动态生成了一个代理类的字节码class
         //    2、new了对象。通过内存中生成的代理类这个代码，实例化了代理对象。
         //创建代理对象.三个参数：类加载器，代理类要实现的接口，调用处理器
-        //  1、ClassLoader loader
+        //  1、ClassLoader loader,
         //  2、Class<?>[] interfaces,
-        //  3、InvocationHandler h
-        Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(),)
+        //  3、InvocationHandler h.
+        OrderService proxyobj= (OrderService)Proxy.newProxyInstance(target.getClass().getClassLoader(),
+                                target.getClass().getInterfaces(),
+                                new TimerInvocationHandler(target));
+        //调用代理对象的代理方法
+        proxyobj.generate();
     }
 }
