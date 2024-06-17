@@ -21,9 +21,16 @@ import javax.sound.midi.Soundbank;
 @Order(2)
 public class LogAspect {//切面
     //切面=通知+切点
-    //@Before注解就是一个前置通知
 
-    @Before("execution(* com.powernode.spring6.service..*(..))")
+    //定义通用切点
+    @Pointcut("execution(* com.powernode.spring6.service..*(..))")
+    public void generalPointCut(){
+        //这个方法只是一个标记，方法名随意，方法中也不需要写任何东西
+    }
+
+    //@Before注解就是一个前置通知
+    //@Before("execution(* com.powernode.spring6.service..*(..))")
+    @Before("generalPointCut()")
     public void beforeAdvice(){
         System.out.println("前置通知");
     }
