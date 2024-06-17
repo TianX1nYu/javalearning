@@ -2,6 +2,7 @@ package com.powernode.spring6.service;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import javax.sound.midi.Soundbank;
@@ -17,6 +18,7 @@ import javax.sound.midi.Soundbank;
  */
 @Component
 @Aspect//切面类需要使用Aspect注解进行标注
+@Order(2)
 public class LogAspect {//切面
     //切面=通知+切点
     //@Before注解就是一个前置通知
